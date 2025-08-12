@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://o1voep3o2pqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tghxr"]
+size = Vector2(850, 448)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37g4p"]
+size = Vector2(820, 170)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yg2w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wl7ka"]
+size = Vector2(200, 53)
+
+[node name="Environment" type="Node2D"]
+
+[node name="FightRoom" type="Area2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="FightRoom"]
+
+[node name="Zone" type="CollisionShape2D" parent="FightRoom"]
+position = Vector2(552, 225)
+shape = SubResource("RectangleShape2D_tghxr")
+
+[node name="ChillRoom" type="Area2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="ChillRoom"]
+
+[node name="Zone" type="CollisionShape2D" parent="ChillRoom"]
+position = Vector2(550, 552)
+shape = SubResource("RectangleShape2D_37g4p")
+
+[node name="Door" type="Area2D" parent="."]
+
+[node name="DoorParts" type="AnimatedSprite2D" parent="Door"]
+sprite_frames = SubResource("SpriteFrames_yg2w3")
+
+[node name="Zone" type="CollisionShape2D" parent="Door"]
+position = Vector2(550, 456.5)
+shape = SubResource("RectangleShape2D_wl7ka")
