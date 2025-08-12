@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhueiq3lgwr0"]
+
+[ext_resource type="Script" uid="uid://ds51pbutx5cga" path="res://ui_scene.gd" id="1_y37xc"]
+[ext_resource type="Texture2D" uid="uid://br6r67pfp6pxd" path="res://assets/ui/Screenshot From 2025-08-12 16-04-09.png" id="2_3thnl"]
+
+[sub_resource type="Theme" id="Theme_xb563"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xb563")
+script = ExtResource("1_y37xc")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48000002
+anchor_top = 0.605
+anchor_right = 0.48000002
+anchor_bottom = 0.605
+offset_left = -231.96002
+offset_top = -0.039978027
+offset_right = 233.03998
+offset_bottom = 62.960022
+text = "OH THAT'S A BASEBALL!"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47900003
+anchor_top = 0.78900003
+anchor_right = 0.47900003
+anchor_bottom = 0.78900003
+offset_left = -232.80804
+offset_top = -0.2720337
+offset_right = 232.19196
+offset_bottom = 62.727966
+text = "SERECT YUR CUR"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.063
+anchor_right = 0.492
+anchor_bottom = 0.063
+offset_left = -233.784
+offset_top = 10.175999
+offset_right = 230.216
+offset_bottom = 254.176
+texture = ExtResource("2_3thnl")
+expand_mode = 1
+
+[connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="ExitButton" to="." method="_on_exit_button_button_down"]

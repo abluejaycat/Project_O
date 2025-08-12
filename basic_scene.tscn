@@ -1,4 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://o1voep3o2pqo"]
+[gd_scene load_steps=8 format=3 uid="uid://o1voep3o2pqo"]
+
+[ext_resource type="Script" uid="uid://blodjtkymgbte" path="res://basic_scene.gd" id="1_37g4p"]
+[ext_resource type="PackedScene" uid="uid://bfjd04x3sc0g" path="res://character.tscn" id="2_yg2w3"]
+[ext_resource type="Texture2D" uid="uid://b1j3bwxjt50ux" path="res://assets/temp/Forklift.png" id="3_wl7ka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tghxr"]
 size = Vector2(850, 448)
@@ -12,6 +16,7 @@ size = Vector2(820, 170)
 size = Vector2(200, 53)
 
 [node name="Environment" type="Node2D"]
+script = ExtResource("1_37g4p")
 
 [node name="FightRoom" type="Area2D" parent="."]
 
@@ -37,3 +42,10 @@ sprite_frames = SubResource("SpriteFrames_yg2w3")
 [node name="Zone" type="CollisionShape2D" parent="Door"]
 position = Vector2(550, 456.5)
 shape = SubResource("RectangleShape2D_wl7ka")
+
+[node name="Character" parent="." instance=ExtResource("2_yg2w3")]
+
+[node name="Forklift" type="Sprite2D" parent="."]
+position = Vector2(552, 227)
+scale = Vector2(0.28432283, 0.28432283)
+texture = ExtResource("3_wl7ka")
